@@ -1,23 +1,29 @@
-//import './App.css';
+import { useEffect, useRef, useState } from "react";
+import "./index.js";
 
-import { useEffect, useState } from "react";
+export default function App() {
+const [pokemons, setPokemons] = useState([])
 
-function App() {
-
+  useEffect(() =>{
+    listPokemons()
+  },[])
+   
+  async function listPokemons(){
+    const result = await fetch('https://pokeapi.co/api/v2/pokemon?limit=20')
+    const data = await result.json();
+    console.log(data)
+    setPokemons(data.results)
+  }
 
 
   return (
-    <div className="App-container">
-      <h1>POKEMON </h1>
-      <div className="pokemon-container">
-        <div className="all-container">
-
-        </div>
-        <button className="next">Next</button>
-        <button className="previous">Previous</button>
-      </div>
+    <div className="App">
+      <h1>Pokemón</h1>
+          <ul>
+            {
+              pokemons.map((pokemon)=><li key={pokemon.name}>{pokemon.name}</li>)
+            }
+          </ul>
     </div>
   );
 }
-
-export default App;
