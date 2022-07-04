@@ -18,4 +18,6 @@ export const UseFetch = (url) => {
                 console.log(e);
             }
         }
+
+        return resultado;
 } 
