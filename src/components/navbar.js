@@ -6,9 +6,11 @@ const Navbar = () => {
     <nav>
       <div>
         <h1>POKEAPI </h1>
-        <Link to="/pokemons">Pokemons</Link> |{""}
-        <Link to="/pokemon/:pokemonId">Pokemon Id</Link> |{""}
-        <Link to="matricula">Matricula</Link>
+        <div className="links"> 
+            <Link to="/pokemons">Pokemons</Link> |{""}
+            <Link to="/pokemon/:pokemonId">Pokemon Id</Link> |{""}
+            <Link to="matricula">Matricula</Link>
+      </div>
       </div>
     </nav>
   );
