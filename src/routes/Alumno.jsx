@@ -1,6 +1,6 @@
 import Navbar from "../components/navbar";
 
-export default function Matricula() {
+export default function Alumno() {
     return (
         <div>
         <Navbar />

@@ -8,8 +8,7 @@ const Navbar = () => {
         <h1>POKEAPI </h1>
         <div className="links"> 
             <Link to="/pokemons">Pokemons</Link> |{""}
-            <Link to="/pokemonId">Pokemon Id</Link> |{""}
-            <Link to="/matricula">Matricula</Link>
+            <Link to="/alumno">Alumno</Link>
       </div>
       </div>
     </nav>

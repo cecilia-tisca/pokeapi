@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
 const Pokemon = (props) => {
   const { pokemon } = props;
@@ -24,6 +25,7 @@ const Pokemon = (props) => {
                 </div>
                 <div></div>
                 </div>
+                <Link to="/pokemonId">Information</Link> 
             </div>
          </div>  
   );
