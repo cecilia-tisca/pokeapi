@@ -6,12 +6,15 @@ import App from './App';
 import Matricula from "./routes/matricula"
 import PokemonId from "./routes/pokemonId"
 import Pokemons from "./routes/pokemons"
+import { Routes } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-     <Route path="/" element = {<App />}></Route>
+      <Routes>
+        <Route path="/" element = {<App />}></Route>
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );
