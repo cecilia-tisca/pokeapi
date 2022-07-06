@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="links"> 
             <Link to="/pokemons">Pokemons</Link> |{""}
             <Link to="/pokemonId">Pokemon Id</Link> |{""}
-            <Link to="matricula">Matricula</Link>
+            <Link to="/matricula">Matricula</Link>
       </div>
       </div>
     </nav>
