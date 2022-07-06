@@ -1,4 +1,4 @@
-export default function Express() {
+export default function Pokemons() {
     return (
         <main>
             <h1>Pokemons</h1>
