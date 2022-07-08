@@ -1,7 +1,8 @@
-export default function Pokemon () {
-    return(
-        <div>
-        <h2>info</h2>
+export default function Pokemon1 () {
+  return(
+        <div className='informacion'>
+          <h1>x</h1>            
         </div>
-    )
+  )
 }
+

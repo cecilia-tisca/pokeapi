@@ -14,9 +14,9 @@ root.render(
       <Routes>
         <Route path="/" element = {<App />} />
         <Route path="/alumno" element={<Alumno/>} />
-        <Route path="/pokemonId" element={<PokemonId />} />
-        <Route path="/pokemons" element={<Pokemons />} />
-    
+        <Route path="/pokemons" element={<Pokemons />} >
+          <Route path=":pokemonId" element={<PokemonId />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

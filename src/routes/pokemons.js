@@ -1,12 +1,13 @@
 import React from "react";
-import "./index.css";
-import Navbar from "./components/navbar";
-import Pokedex from "./components/pokedex";
-import { getPokemonData, getPokemons } from "./api";
+import "../index.css";
+import Navbar from "../components/navbar";
+import Pokedex from "../components/pokedex";
+import { getPokemonData, getPokemons } from "../api";
+import { Outlet } from "react-router-dom";
 
 const { useState, useEffect } = React;
 
-export default function App() {
+export default function Pokemons() {
   const [pokemons, setPokemons] = useState([]);
   const [page, setPage] = useState(1);
   const [total, setTotal] = useState(0);
@@ -33,6 +34,19 @@ export default function App() {
   return (
     <div>
       <Navbar />
+      <div className="App">
+        <Outlet></Outlet>
+        {loading ? (
+          <div>Cargando pokemones</div>
+        ) : (
+          <Pokedex
+            pokemons={pokemons}
+            page={page}
+            setPage={setPage}
+            total={total}
+          />
+        )}
+      </div>
     </div>
   );
 }

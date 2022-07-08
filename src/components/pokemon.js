@@ -22,10 +22,11 @@ const Pokemon = (props) => {
                     {pokemon.types.map((type, idx) => {
                     return <div key={idx}>{type.type.name}</div>;
                     })}
+                    
                 </div>
                 <div></div>
                 </div>
-                <Link to="/pokemonId">Information</Link> 
+                <Link to={"/pokemons/" + pokemon.id}>Information</Link> 
             </div>
          </div>  
   );
